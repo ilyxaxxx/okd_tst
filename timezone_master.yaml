@@ -1,0 +1,23 @@
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+  labels:
+    machineconfiguration.openshift.io/role: master
+  name: 99-timezone-master-samara
+spec:
+  config:
+    ignition:
+      version: 3.0.0
+    systemd: 
+      units:
+        - contents: |
+            [Unit]
+            Description=TimeZone to Samara
+            Before=kubelet.service
+            [Service]
+            Type=oneshot
+            ExecStart=/usr/bin/timedatectl set-timezone Europe/Samara
+            [Install]
+            WantedBy=multi-user.target
+          enabled: true
+          name: samara-timezone.service

@@ -1,0 +1,16 @@
+{
+    "apiVersion": "v1",
+    "data": {
+        "kubeadmin": "JDJhJDEwJHZFV0xZWks2ZFRxRXNxTjZ2cXVLME92ek1idU1NTFRYN2s3Q1BUNFp5bHVHMWVjemh3Tklx"
+    },
+    "kind": "Secret",
+    "metadata": {
+        "creationTimestamp": "2020-04-10T14:16:22Z",
+        "name": "kubeadmin",
+        "namespace": "kube-system",
+        "resourceVersion": "56",
+        "selfLink": "/api/v1/namespaces/kube-system/secrets/kubeadmin",
+        "uid": "9409b79d-b3e7-4a48-8a62-fc942ee6cbe2"
+    },
+    "type": "Opaque"
+}
